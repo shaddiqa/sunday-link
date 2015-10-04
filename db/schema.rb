@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004125714) do
+ActiveRecord::Schema.define(version: 20151004153434) do
+
+  create_table "facebook_comments", id: false, force: :cascade do |t|
+    t.string   "id"
+    t.string   "message"
+    t.string   "user_id"
+    t.string   "social_media_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "products", id: false, force: :cascade do |t|
     t.string   "id"
@@ -29,6 +38,7 @@ ActiveRecord::Schema.define(version: 20151004125714) do
     t.text     "auth_params"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "last_id"
   end
 
   create_table "vt_link_pages", force: :cascade do |t|

@@ -1,4 +1,4 @@
-class CreateSocmeds < ActiveRecord::Migration
+class CreateSocialMedias < ActiveRecord::Migration
   def change
     create_table(:social_medias, id: false) do |t|
       t.string :id, primary_key: true
