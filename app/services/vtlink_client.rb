@@ -23,6 +23,6 @@ class VtlinkClient
       end
     end
     # update page after data_api == data.per_page
-    page.update(page: page.page + 1) if data_api["data"].count == page.per_page && page.page != total_page
+    page.update(page: page.page + 1) if data_api["data"].count == MAX_FETCH_LIMIT && page.page != total_page
   end
 end
