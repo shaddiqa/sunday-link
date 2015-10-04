@@ -1,13 +1,10 @@
 class CreateProducts < ActiveRecord::Migration
   def change
-    create_table :products do |t|
-      t.integer :price
+    create_table(:products, id: false) do |t|
+      t.string :vt_id, primary_key: true
+      t.integer :gross_amount
       t.string :name
-      t.string :type
-      t.integer :quantity
       t.text :link
-      t.integer :vt_id
-      t.integer :socmed_id
 
       t.timestamps null: false
     end

@@ -1,10 +1,10 @@
 class CreateSocmeds < ActiveRecord::Migration
   def change
-    create_table :socmeds do |t|
+    create_table(:social_medias, id: false) do |t|
+      t.text :socmed_id, primary_key: true
       t.integer :product_id
-      t.string :type
-      t.integer :page
-      t.integer :per_page
+      t.string :media
+      t.text :auth_params
 
       t.timestamps null: false
     end

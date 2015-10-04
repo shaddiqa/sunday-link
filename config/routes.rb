@@ -4,6 +4,8 @@ Rails.application.routes.draw do
       resources :posts, only: [:index]
     end
   end
+  root 'home#index'
+  get '/auth/:provider/callback' => 'sessions#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

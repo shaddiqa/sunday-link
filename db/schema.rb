@@ -11,23 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004032636) do
+ActiveRecord::Schema.define(version: 20151004125714) do
 
-  create_table "products", force: :cascade do |t|
-    t.integer  "price"
+  create_table "products", id: false, force: :cascade do |t|
+    t.string   "vt_id"
+    t.integer  "gross_amount"
     t.string   "name"
-    t.string   "type"
-    t.integer  "quantity"
     t.text     "link"
-    t.integer  "vt_id"
-    t.integer  "socmed_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
-  create_table "socmeds", force: :cascade do |t|
+  create_table "social_medias", id: false, force: :cascade do |t|
+    t.text     "socmed_id"
     t.integer  "product_id"
-    t.string   "type"
+    t.string   "media"
+    t.text     "auth_params"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "vt_link_pages", force: :cascade do |t|
     t.integer  "page"
     t.integer  "per_page"
     t.datetime "created_at", null: false

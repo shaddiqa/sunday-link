@@ -1,3 +1,2 @@
-class Socmed < ActiveRecord::Base
-  enum type: %w(facebook twitter)
+class Socmed
 end
