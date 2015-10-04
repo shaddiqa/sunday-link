@@ -33,7 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 ## added new gem
-gem 'sidekiq'
+gem 'sidekiq', '~> 3.4.2'
 gem 'sidetiq'
 gem 'figaro'
 gem 'httparty'
@@ -41,6 +41,7 @@ gem 'httparty'
 ## added new omniauth
 gem 'koala'
 gem 'twitter'
+gem 'sinatra', require: false
 
 
 group :development, :test do
