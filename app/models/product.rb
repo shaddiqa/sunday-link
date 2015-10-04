@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
-  validates :gross_amount, :name, :link, presence: true
+  self.primary_key = "id"
+  validates :gross_amount, :name, :id, :link, presence: true
   has_many :social_medias
 end

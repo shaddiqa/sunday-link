@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004125714) do
+ActiveRecord::Schema.define(version: 20151004143658) do
 
   create_table "products", id: false, force: :cascade do |t|
     t.string   "id"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20151004125714) do
     t.text     "link"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "replies", force: :cascade do |t|
+    t.text     "message"
+    t.string   "social_media_id"
+    t.integer  "user_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "social_medias", id: false, force: :cascade do |t|
