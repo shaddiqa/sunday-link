@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20151004125714) do
 
   create_table "products", id: false, force: :cascade do |t|
-    t.string   "vt_id"
+    t.string   "id"
     t.integer  "gross_amount"
     t.string   "name"
     t.text     "link"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20151004125714) do
   end
 
   create_table "social_medias", id: false, force: :cascade do |t|
-    t.text     "socmed_id"
+    t.string   "id"
     t.integer  "product_id"
     t.string   "media"
     t.text     "auth_params"
