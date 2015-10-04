@@ -34,15 +34,15 @@ ActiveRecord::Schema.define(version: 20151004153434) do
   create_table "replies", force: :cascade do |t|
     t.text     "message"
     t.string   "social_media_id"
-    t.integer  "user_id"
+    t.string   "user_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
   create_table "social_medias", id: false, force: :cascade do |t|
     t.string   "id"
-    t.integer  "product_id"
-    t.string   "media"
+    t.string   "product_id"
+    t.integer  "media"
     t.text     "auth_params"
     t.string   "last_id"
     t.datetime "created_at",  null: false
