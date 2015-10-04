@@ -3,6 +3,7 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.integer :price
       t.string :name
+      t.string :type
       t.integer :quantity
       t.text :link
       t.integer :vt_id
