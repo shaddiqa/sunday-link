@@ -5,6 +5,7 @@ class CreateSocialMedias < ActiveRecord::Migration
       t.string :product_id
       t.integer :media
       t.text :auth_params
+      t.string :last_id
 
       t.timestamps null: false
     end
