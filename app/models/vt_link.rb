@@ -3,18 +3,20 @@ class VtLink
   base_uri ENV["URI_TURBO"]
 
   def fetch_sample_api
+    # get page & per_page for auto increment
     page = VtLinkPage.first
-    data_api = self.class.get("/api/v1/posts?per_page=#{page.per_page}&page=#{page.page}")
+    data_api = self.class.get("/api/v1/vtlinks.json?per_page=#{page.per_page}&page=#{page.page}")
     total_page = data_api["total_page"]
-    return false if  page.page >= total_page
     data_api["data"].each do |product|
-      puts product
-      # unless Product.find_by_vt_id(product.id)
-      #   @product = Product.create(name: product.name, vt_id: product.id, link: product.link)
-      #   data_api["social_medias"].each do |socmed|
-      #     @product = SocialMedia.create(media: product.media, socmed_id: product.id)
-      #   end
-      # end
+      vt_product = Product.find_by_id(product["id"])
+      unless vt_product
+        ## create product
+        Product.create(id: product["id"], name: product["name"], 
+                       gross_amount: product['gross_amount'], link: product['link'])
+        product["social_medias"].each do |socmed|
+          SocialMedia.create(media: socmed['media'], id: socmed['id'], auth_params: socmed['auth_params'].to_json)
+        end
+      end
     end
     page.update(page: page.page + 1) if data_api["data"].count >= page.per_page
   end
