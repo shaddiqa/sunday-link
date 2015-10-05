@@ -1,14 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>SundayLink</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<%= yield %>
+    <title>Promo</title>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+
+    <link rel="icon" type="image/x-icon" href="images/favicons/veritrans.ico" />
+    <meta name="description" content="Payment Gateway Solution for eCommerce merchants in Indonesia to send and receive online payment with credit/debit card, internet and mobile banking"/>    
+    <meta name="keywords" content="payment gateway indonesia, online payment indonesia, online payment gateway Indonesia, sistem pembayaran online, eCommerce payment indonesia, online payment processor, payment processor indonesia, credit card payment indonesia, debit card payment indonesia, online store payment"/>
+    
+  </head>
+  
+  <body class="body" id="top">
+
+    <nav class="navbar navbar-fixed-top with-shadow">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo" href="/"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="nav navbar-nav">
+            <li><a class="uppercase" id="paymentHeader" href="payment_channels.html">Payments</a></li>
+            <li><a class="uppercase" id="pricingHeader" href="product_pricing.html">Product & Pricing</a></li>
+
+            <li><a class="uppercase" id="promoHeader" href="promo.html">Promo</a></li>
+            <!-- <li>
+              <a class="uppercase" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Shopping <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a class="uppercase" href="event.html">Event &amp; Promo</a></li>
+                <li><a class="uppercase" href="directory.html">Directory</a></li>
+              </ul>
+            </li> -->
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a id="docsHeader" href="http://docs.veritrans.co.id">Docs</a>
+            </li>
+            <li>
+              <a id="contactHeader" href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a id="blogHeader" href="https://blog.veritrans.co.id">Blog</a>
+            </li>
+            <li>
+              <a id="careerHeader" href="career.html">Career</a>
+            </li>
+            <li>
+              <a id="logInHeader" class="uppercase text-bold" href="https://my.veritrans.co.id/">
+                Log In
+              </a>
+            </li>
+            <li>
+              <div>
+                <a id="signUpHeader" href="https://my.veritrans.co.id/register" class="btn btn-yellow">
+                  Sign Up
+                </a>
+              </div>
+              
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="nav-overlay visible-sm visible-xs"></div>
+
+    <%= yield %>
+  <footer>
+    <div class="container">
+      <div class="row footer-content">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+          <h4 class="text-gray">Veritrans</h4>
+          <ul>
+            <li>
+              <a href="/" id="footer-home">Home</a>
+            </li>
+            <li>
+              <a href="payment_channels.html" id="footer-payment">Payment Channels</a>
+            </li>
+            <li>
+              <a href="product_pricing.html" id="footer-product">Product &amp; Pricing</a>
+            </li>
+            <li>
+              <a href="promo.html" id="footer-promo">Promo</a>
+            </li>
+            <li>
+              <a href="case_study.html" id="footer-case">Case Study</a>
+            </li>
+            <li>
+              <a href="aegis.html" id="footer-aegis">Aegis</a>
+            </li>
+          </ul>
+          <!-- <h4 class="text-gray">Shopping</h4>
+          <ul>
+            <li>
+              <a href="event.html">Promo</a>
+            </li>
+            <li>
+              <a href="directory.html">Directory</a>
+            </li>
+          </ul> -->
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+          <h4 class="text-gray">Devs</h4>
+          <ul>
+            <li>
+              <a href="http://docs.veritrans.co.id" id="footer-docs">Documentations</a>
+            </li>
+          </ul>
+          <h4 class="text-gray about-footer">About</h4>
+          <ul>
+            <li>
+              <a href="about.html" id="footer-team">Team</a>
+            </li>
+            <li>
+              <a href="career.html" id="footer-career">Career</a>
+            </li>
+            <li>
+              <a href="press.html">Press</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+          <h4 class="text-gray">Help</h4>
+          <ul>
+            <li>
+              <a href="https://blog.veritrans.co.id" id="footer-blog">Blog</a>
+            </li>
+            <li>
+              <a href="http://support.veritrans.co.id" id="footer-faq">FAQ</a>
+            </li>
+            <li>
+              <a href="contact.html" id="footer-contact">Contact</a>
+            </li>
+            <li>
+              <a href="privacy_policy.html" id="footer-privacy">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 find-us-footer">
+          <h4 class="text-gray">Find Us</h4>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/veritransID" id="footer-facebook">Facebook</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/veritransid" id="footer-twitter">Twitter</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/veritransid" id="footer-instagram">Instagram</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/pt-midtrans" id="footer-linkedin">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCtPNqTFgR1aXpEFA9B_djnw" id="footer-youtube">YouTube</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <h4 class="text-gray with-subtitle">
+            Subscribe
+          </h4>
+          <small>
+            tips &amp; berita terbaru seputar eCommerce
+          </small>
+          <div id="mc_embed_signup">
+            <form action="//veritrans.us9.list-manage.com/subscribe/post?u=4ed5f88335112571098a4a51c&amp;id=12315939d2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group">
+                    <input type="email" value="" name="EMAIL" class="required email search-input" id="mce-EMAIL" placeholder="EMAIL" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required/>
+                </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>   
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_4ed5f88335112571098a4a51c_12315939d2" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-search"/></div>
+                </div>
+            </form>
+          </div>
+          <a href="#top" class="backtotop">Back to Top &uarr;</a>
+        </div>
+      </div>
+      <div class="copyright text-center">
+        <br/>
+        &copy; 2015 PT Midtrans
+        <br/>
+        <br/>
+      </div>
+    </div>
+  </footer>
+<div class="modal fade" id="underConstruction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Sorry!</h4>
+      </div>
+      <div class="modal-body text-center">
+        We're still building this web page.<br/>
+        Be the first to know when it's done by <a class="dotted" href="https://veritrans.us9.list-manage.com/subscribe/post?u=4ed5f88335112571098a4a51c&id=12315939d2">subscribing</a> to our newsletter.
+      </div>
+    </div>
+  </div>
+</div>
+<script language="javascript" type="text/javascript">
+  function popitup(url) {
+    newwindow=window.open(url,'name','height=430,width=540');
+    if (window.focus) {newwindow.focus()}
+    return false;
+  }
+</script>   
 
 </body>
 </html>

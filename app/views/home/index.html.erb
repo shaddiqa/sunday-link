@@ -1,2 +1,157 @@
-<a href="<%= "/auth/facebook" %>">Login</a>
-<a href="<%= "/auth/twitter" %>">Login Twitter</a>
+<!-- start -->
+<div class="container-fluid">
+  <div class="row banner sh-banner">
+    <div class="container">
+      <div class="col-md-8 col-xs-12">
+        <h1 id="pricing" class="title">event &amp; promo </h1>
+        <p>
+            veritrans memberikan info event dan promo terbaru dari toko online terkemuka di indonesia untuk membantu anda menemukan harga terbaik.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid event-cont">
+  <div class="container">
+    <!-- add -->
+    <h5 style="color:#fbb03b">
+      top deals
+    </h5>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="slider-wrapper">
+          <div class="slider-inner default">
+            <div class="slider active">
+              <div class="slider-image">
+                <a href="#">
+                  <img src="<%= asset_url 'mock1.png' %>" alt="">
+                </a>
+              </div>
+              <div class="slider-content">
+                <h2>gajah duduk</h2>
+                <p>diskon lebaran! sarung gajah duduk tipe 51. kami terima pembayaran online dengan cicilan: <a href="#">http://vtweb.com/36871090</a></p>
+                <a href="#" class="btn btn-trans-blue">buy now</a>
+              </div>
+            </div>
+            <div class="slider">
+              <div class="slider-image">
+                <a href="#">
+                  <img src="<%= asset_url "mock2.png"%>" alt="">
+                </a>
+              </div>
+              <div class="slider-content">
+                <h2>gajah jingkrak</h2>
+                <p>diskon lebaran! sarung gajah duduk tipe 51. kami terima pembayaran online dengan cicilan: <a href="#">http://vtweb.com/36871090</a></p>
+                <a href="#" class="btn btn-trans-blue">buy now</a>
+              </div>
+            </div>
+            <div class="slider">
+              <div class="slider-image">
+                <a href="#">
+                  <img src="<%= asset_url "mock3.png"%>" alt="">
+                </a>
+              </div>
+              <div class="slider-content">
+                <h2>gajah tidur</h2>
+                <p>diskon lebaran! sarung gajah duduk tipe 51. kami terima pembayaran online dengan cicilan: <a href="#">http://vtweb.com/36871090</a></p>
+                <a href="#" class="btn btn-trans-blue">buy now</a>
+              </div>
+            </div>
+            <div class="slider">
+              <div class="slider-image">
+                <a href="#">
+                  <img src="<%= asset_url "mock4.png"%>" alt="">
+                </a>
+              </div>
+              <div class="slider-content">
+                <h2>kuda duduk</h2>
+                <p>diskon lebaran! sarung gajah duduk tipe 51. kami terima pembayaran online dengan cicilan: <a href="#">http://vtweb.com/36871090</a></p>
+                <a href="#" class="btn btn-trans-blue">buy now</a>
+              </div>
+            </div>
+            <div class="slider">
+              <div class="slider-image">
+                <a href="#">
+                  <img src="<%= asset_url "mock5.png"%>" alt="">
+                </a>
+              </div>
+              <div class="slider-content">
+                <h2>kucing hamil</h2>
+                <p>diskon lebaran! sarung gajah duduk tipe 51. kami terima pembayaran online dengan cicilan: <a href="#">http://vtweb.com/36871090</a></p>
+                <a href="#" class="btn btn-trans-blue">buy now</a>
+              </div>
+            </div>
+            <div class="slider last">
+              <div class="slider-image">
+                <a href="#">
+                  see all
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="slider second">
+            <a href="#">
+              <img src="images/mock2.png" alt="">
+            </a>
+          </div> -->
+          <div class="slider-next">
+            <span>&rsaquo;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /add -->
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.slider-next').click(function(){
+      if ($('.slider.active').next('.slider').length){
+        $('.slider-inner').css('left','-=832px');
+        $('.slider.active').next('.slider').addclass('active').prev('.slider').removeclass('active');
+      }
+      if (!$('.slider.active').next('.slider').length){
+        $('.slider-inner').css('left','0px');
+        $('.slider').removeclass('active');
+        $('.slider:first-child').addclass('active');
+      }
+    });
+  });
+  </script>
+
+  <div class="row">
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+      <div class="sort-cont">
+        <h5>
+          live deals
+        </h5>
+        <div class="sort-category end-soon">
+          ending soon
+        </div>
+        <div class="sort-category latest">
+          new deals
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-3 col-sm-offset-0 hidden-xs">
+      <div class="sort-cont" data-spy="affix" data-offset-top="380">
+        <h5>
+          live deals
+        </h5>
+        <div class="sort-category end-soon">
+          ending soon
+        </div>
+        <div class="sort-category latest">
+          new deals
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9 col-md-offset-1 col-sm-9 col-xs-12">
+      <div class="col-md-6 col-sm-6 col-xs-12 event-list-cont"><div class="event-text-cont"><img src="<%= asset_url 'merchants/rakuten.png' %>" alt="" class="event-logo"><p class="event-desc">Untuk pembayaran menggunakan kartu kredit Master Card dengan potongan maximum IDR 50,000</p><p class="event-date">setiap kamis sampai 31 Oktober 2015</p><a class="event-read" href="http://www.rakuten.co.id/event/mastercard/?scid=rbo_news_23042015_02_mastercard#areaTNC" target="_blank">Lihat Promo</a></div><div class="event-bullets-cont"><div class="event-bullets discount"><span>discount</span><h4>10%</h4></div></div></div>
+      <div class="col-md-6 col-sm-6 col-xs-12 event-list-cont"><div class="event-text-cont"><img src="<%= asset_url 'merchants/mataharimall.png' %>" alt="" class="event-logo"><p class="event-desc">Untuk pembayaran menggunakan kartu kredit Master Card dengan potongan maximum IDR 50,000</p><p class="event-date">setiap kamis sampai 31 Oktober 2015</p><a class="event-read" href="http://www.rakuten.co.id/event/mastercard/?scid=rbo_news_23042015_02_mastercard#areaTNC" target="_blank">Lihat Promo</a></div><div class="event-bullets-cont"><div class="event-bullets discount"><span>discount</span><h4>10%</h4></div></div></div>
+      <div class="col-md-6 col-sm-6 col-xs-12 event-list-cont"><div class="event-text-cont"><img src="<%= asset_url 'merchants/rakuten.png' %>" alt="" class="event-logo"><p class="event-desc">Untuk pembayaran menggunakan kartu kredit Master Card dengan potongan maximum IDR 50,000</p><p class="event-date">setiap kamis sampai 31 Oktober 2015</p><a class="event-read" href="http://www.rakuten.co.id/event/mastercard/?scid=rbo_news_23042015_02_mastercard#areaTNC" target="_blank">Lihat Promo</a></div><div class="event-bullets-cont"><div class="event-bullets discount"><span>discount</span><h4>10%</h4></div></div></div>
+      <div class="col-md-6 col-sm-6 col-xs-12 event-list-cont"><div class="event-text-cont"><img src="<%= asset_url 'merchants/mataharimall.png' %>" alt="" class="event-logo"><p class="event-desc">Untuk pembayaran menggunakan kartu kredit Master Card dengan potongan maximum IDR 50,000</p><p class="event-date">setiap kamis sampai 31 Oktober 2015</p><a class="event-read" href="http://www.rakuten.co.id/event/mastercard/?scid=rbo_news_23042015_02_mastercard#areaTNC" target="_blank">Lihat Promo</a></div><div class="event-bullets-cont"><div class="event-bullets discount"><span>discount</span><h4>10%</h4></div></div></div>
+    </div>
+  </div>
+</div>
+</div>
+
