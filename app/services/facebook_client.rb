@@ -15,6 +15,7 @@ class FacebookClient
           tmp.id = comment["id"]
           tmp.message = comment["message"]
           tmp.user_id = comment["from"]["id"]
+          tmp.social_media_id = post_id
           tmp.save
         end
       end

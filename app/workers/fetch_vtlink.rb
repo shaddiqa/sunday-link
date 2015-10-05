@@ -1,8 +1,8 @@
 class FetchVtlink
   include Sidekiq::Worker
   include Sidetiq::Schedulable
-  
-  recurrence { minutely }
+
+  recurrence { minutely(15) }
   sidekiq_options queue: :fetch_social_media
 
   def perform

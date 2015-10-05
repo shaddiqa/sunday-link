@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20151004153434) do
 
   create_table "products", id: false, force: :cascade do |t|
     t.string   "id"
-    t.integer  "gross_amount"
+    t.string   "gross_amount"
     t.string   "name"
     t.text     "link"
     t.datetime "created_at",   null: false
