@@ -104,17 +104,17 @@
 
   <script type="text/javascript">
   $(document).ready(function(){
-    $('.slider-next').click(function(){
-      if ($('.slider.active').next('.slider').length){
-        $('.slider-inner').css('left','-=832px');
-        $('.slider.active').next('.slider').addclass('active').prev('.slider').removeclass('active');
-      }
-      if (!$('.slider.active').next('.slider').length){
-        $('.slider-inner').css('left','0px');
-        $('.slider').removeclass('active');
-        $('.slider:first-child').addclass('active');
-      }
-    });
+  $('.slider-next').click(function(){
+    if ($('.slider.active').next('.slider').length){
+      $('.slider-inner').css('left','-=832px');
+      $('.slider.active').next('.slider').addClass('active').prev('.slider').removeClass('active');
+    }
+    if (!$('.slider.active').next('.slider').length){
+      $('.slider-inner').css('left','0px');
+      $('.slider').removeClass('active');
+      $('.slider:first-child').addClass('active');
+    }
+  });
   });
   </script>
 
