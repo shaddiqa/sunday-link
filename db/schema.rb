@@ -31,7 +31,8 @@ ActiveRecord::Schema.define(version: 20151004153434) do
     t.datetime "updated_at",   null: false
   end
 
-  create_table "replies", force: :cascade do |t|
+  create_table "replies", id: false, force: :cascade do |t|
+    t.string   "id"
     t.text     "message"
     t.string   "social_media_id"
     t.string   "user_id"
@@ -49,7 +50,7 @@ ActiveRecord::Schema.define(version: 20151004153434) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "vt_link_pages", force: :cascade do |t|
+  create_table "vtlink_pages", force: :cascade do |t|
     t.integer  "page"
     t.integer  "per_page"
     t.datetime "created_at", null: false

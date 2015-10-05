@@ -1,6 +1,6 @@
-class CreateVtLinkPages < ActiveRecord::Migration
+class CreateVtlinkPages < ActiveRecord::Migration
   def change
-    create_table :vt_link_pages do |t|
+    create_table :vtlink_pages do |t|
       t.integer :page
       t.integer :per_page
 
